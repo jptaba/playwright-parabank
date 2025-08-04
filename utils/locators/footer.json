@@ -1,0 +1,37 @@
+{
+  "h2": { "selectors": ["h2"], "fallback": "h2" },
+  "h4": { "selectors": ["h4"], "fallback": "h4" },
+  "div#footermainPanel": {
+    "selectors": ["div#footermainPanel"],
+    "fallback": "div#footermainPanel"
+  },
+  "div#footerPanel": {
+    "selectors": ["div#footerPanel"],
+    "fallback": "div#footerPanel"
+  },
+  "a[text=\"Home\"]": {
+    "selectors": ["[data-testid='footer-home']", "text=Home"],
+    "testId": "footer-home",
+    "fallback": "[data-testid='footer-home']"
+  },
+  "a[text=\"Forum\"]": {
+    "selectors": ["[data-testid='footer-forum']", "text=Forum"],
+    "testId": "footer-forum",
+    "fallback": "[data-testid='footer-forum']"
+  },
+  "a[text=\"Site Map\"]": {
+    "selectors": ["[data-testid='footer-site-map']", "text=Site Map"],
+    "testId": "footer-site-map",
+    "fallback": "[data-testid='footer-site-map']"
+  },
+  "a[text=\"Contact Us\"]": {
+    "selectors": ["[data-testid='footer-contact']", "text=Contact Us"],
+    "testId": "footer-contact",
+    "fallback": "[data-testid='footer-contact']"
+  },
+  "a[text=\"www.parasoft.com\"]": {
+    "selectors": ["[data-testid='footer-parasoft']", "text=www.parasoft.com"],
+    "testId": "footer-parasoft",
+    "fallback": "[data-testid='footer-parasoft']"
+  }
+}

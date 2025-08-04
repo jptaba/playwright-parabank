@@ -1,0 +1,4 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","1","get started link","firefox","Sun Aug 03 19:38:29 EDT 2025","failed","Sun Aug 03 19:38:29 EDT 2025","","example.spec.ts","",""
+"","10","test","firefox","Sun Aug 03 19:38:29 EDT 2025","failed","Sun Aug 03 19:38:29 EDT 2025","","sampletest.spec.ts","",""
+"","1","has title","firefox","Sun Aug 03 19:38:29 EDT 2025","failed","Sun Aug 03 19:38:29 EDT 2025","","example.spec.ts","",""

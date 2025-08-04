@@ -1,0 +1,46 @@
+{
+  "usernameInput": {
+    "selectors": [
+      "[data-testid='username']",
+      "input[name='username']",
+      "#loginPanel input[name='username']"
+    ],
+    "testId": "username",
+    "name": "username",
+    "fallback": "[data-testid='username']"
+  },
+  "passwordInput": {
+    "selectors": [
+      "[data-testid='password']",
+      "input[name='password']",
+      "#loginPanel input[name='password']"
+    ],
+    "testId": "password",
+    "name": "password",
+    "fallback": "[data-testid='password']"
+  },
+  "loginButton": {
+    "selectors": [
+      "[data-testid='login-button']",
+      "input[type='submit']",
+      "#loginPanel input[type='submit']"
+    ],
+    "testId": "login-button",
+    "type": "submit",
+    "fallback": "[data-testid='login-button']"
+  },
+  "accountOverviewHeader": {
+    "selectors": ["h1.title", "h1"],
+    "fallback": "h1.title"
+  },
+  "logoutLink": {
+    "selectors": [
+      "[data-testid='logout-link']",
+      "a[href*='logout.htm']",
+      "#leftPanel a[href*='logout.htm']",
+      "text=Log Out"
+    ],
+    "testId": "logout-link",
+    "fallback": "[data-testid='logout-link']"
+  }
+}

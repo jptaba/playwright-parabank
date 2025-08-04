@@ -1,0 +1,63 @@
+{
+  "div#rightPanel": {
+    "selectors": ["div#rightPanel"],
+    "fallback": "div#rightPanel"
+  },
+  "span": { "selectors": ["span"], "fallback": "span" },
+  "a[text=\"Withdraw Funds\"]": {
+    "selectors": ["[data-testid='withdraw-funds']", "text=Withdraw Funds"],
+    "testId": "withdraw-funds",
+    "fallback": "[data-testid='withdraw-funds']"
+  },
+  "a[text=\"Transfer Funds\"]": {
+    "selectors": ["[data-testid='transfer-funds']", "text=Transfer Funds"],
+    "testId": "transfer-funds",
+    "fallback": "[data-testid='transfer-funds']"
+  },
+  "a[text=\"Check Balances\"]": {
+    "selectors": ["[data-testid='check-balances']", "text=Check Balances"],
+    "testId": "check-balances",
+    "fallback": "[data-testid='check-balances']"
+  },
+  "a[text=\"Make Deposits\"]": {
+    "selectors": ["[data-testid='make-deposits']", "text=Make Deposits"],
+    "testId": "make-deposits",
+    "fallback": "[data-testid='make-deposits']"
+  },
+  "a[text=\"Bill Pay\"]": {
+    "selectors": ["[data-testid='bill-pay']", "text=Bill Pay"],
+    "testId": "bill-pay",
+    "fallback": "[data-testid='bill-pay']"
+  },
+  "a[text=\"Account History\"]": {
+    "selectors": ["[data-testid='account-history']", "text=Account History"],
+    "testId": "account-history",
+    "fallback": "[data-testid='account-history']"
+  },
+  "a[text=\"Read More\"]": {
+    "selectors": ["[data-testid='read-more']", "text=Read More"],
+    "testId": "read-more",
+    "fallback": "[data-testid='read-more']"
+  },
+  "a[text=\"ParaBank Is Now Re-Opened\"]": {
+    "selectors": ["[data-testid='reopened']", "text=ParaBank Is Now Re-Opened"],
+    "testId": "reopened",
+    "fallback": "[data-testid='reopened']"
+  },
+  "a[text=\"New! Online Bill Pay\"]": {
+    "selectors": [
+      "[data-testid='online-bill-pay']",
+      "text=New! Online Bill Pay"
+    ],
+    "testId": "online-bill-pay",
+    "fallback": "[data-testid='online-bill-pay']"
+  },
+  "a[text=\"New! Online Account Transfers\"]": {
+    "selectors": [
+      "[data-testid='online-account-transfers']",
+      "text=New! Online Account Transfers"
+    ],
+    "testId": "online-account-transfers",
+    "fallback": "[data-testid='online-account-transfers']"
+  }
+}

@@ -1,0 +1,178 @@
+{
+  "html": { "selectors": ["html"], "fallback": "html" },
+  "head": { "selectors": ["head"], "fallback": "head" },
+  "meta": { "selectors": ["meta"], "fallback": "meta" },
+  "title": { "selectors": ["title"], "fallback": "title" },
+  "link[type=\"text/css\"]": {
+    "selectors": ["link[type=\"text/css\"]"],
+    "fallback": "link[type=\"text/css\"]"
+  },
+  "script": { "selectors": ["script"], "fallback": "script" },
+  "body": { "selectors": ["body"], "fallback": "body" },
+  "div#mainPanel": {
+    "selectors": ["div#mainPanel"],
+    "fallback": "div#mainPanel"
+  },
+  "div#topPanel": { "selectors": ["div#topPanel"], "fallback": "div#topPanel" },
+  "a": { "selectors": ["a"], "fallback": "a" },
+  "img": { "selectors": ["img"], "fallback": "img" },
+  "p": { "selectors": ["p"], "fallback": "p" },
+  "div#headerPanel": {
+    "selectors": ["div#headerPanel"],
+    "fallback": "div#headerPanel"
+  },
+  "ul": { "selectors": ["ul"], "fallback": "ul" },
+  "li": { "selectors": ["li"], "fallback": "li" },
+  "a[text=\"About Us\"]": {
+    "selectors": ["[data-testid='about-us']", "text=About Us"],
+    "testId": "about-us",
+    "fallback": "[data-testid='about-us']"
+  },
+  "a[text=\"Services\"]": {
+    "selectors": ["[data-testid='services']", "text=Services"],
+    "testId": "services",
+    "fallback": "[data-testid='services']"
+  },
+  "a[text=\"Products\"]": {
+    "selectors": ["[data-testid='products']", "text=Products"],
+    "testId": "products",
+    "fallback": "[data-testid='products']"
+  },
+  "a[text=\"Locations\"]": {
+    "selectors": ["[data-testid='locations']", "text=Locations"],
+    "testId": "locations",
+    "fallback": "[data-testid='locations']"
+  },
+  "a[text=\"Admin Page\"]": {
+    "selectors": ["[data-testid='admin-page']", "text=Admin Page"],
+    "testId": "admin-page",
+    "fallback": "[data-testid='admin-page']"
+  },
+  "a[text=\"home\"]": {
+    "selectors": ["[data-testid='main-home']", "text=home"],
+    "testId": "main-home",
+    "fallback": "[data-testid='main-home']"
+  },
+  "a[text=\"about\"]": {
+    "selectors": ["[data-testid='main-about']", "text=about"],
+    "testId": "main-about",
+    "fallback": "[data-testid='main-about']"
+  },
+  "a[text=\"contact\"]": {
+    "selectors": ["[data-testid='main-contact']", "text=contact"],
+    "testId": "main-contact",
+    "fallback": "[data-testid='main-contact']"
+  },
+  "div#bodyPanel": {
+    "selectors": ["div#bodyPanel"],
+    "fallback": "div#bodyPanel"
+  },
+  "div#leftPanel": {
+    "selectors": ["div#leftPanel"],
+    "fallback": "div#leftPanel"
+  },
+  "h2": { "selectors": ["h2"], "fallback": "h2" },
+  "div#loginPanel": {
+    "selectors": ["div#loginPanel"],
+    "fallback": "div#loginPanel"
+  },
+  "form[name=\"login\"]": {
+    "selectors": ["form[name=\"login\"]"],
+    "fallback": "form[name=\"login\"]"
+  },
+  "b": { "selectors": ["b"], "fallback": "b" },
+  "div": { "selectors": ["div"], "fallback": "div" },
+  "input[name=\"username\"]": {
+    "selectors": ["input[name=\"username\"]"],
+    "fallback": "input[name=\"username\"]"
+  },
+  "input[name=\"password\"]": {
+    "selectors": ["input[name=\"password\"]"],
+    "fallback": "input[name=\"password\"]"
+  },
+  "input[type=\"submit\"]": {
+    "selectors": ["input[type=\"submit\"]"],
+    "fallback": "input[type=\"submit\"]"
+  },
+  "a[text=\"Forgot login info?\"]": {
+    "selectors": ["[data-testid='forgot-login']", "text=Forgot login info?"],
+    "testId": "forgot-login",
+    "fallback": "[data-testid='forgot-login']"
+  },
+  "a[text=\"Register\"]": {
+    "selectors": ["[data-testid='register']", "text=Register"],
+    "testId": "register",
+    "fallback": "[data-testid='register']"
+  },
+  "div#rightPanel": {
+    "selectors": ["div#rightPanel"],
+    "fallback": "div#rightPanel"
+  },
+  "span": { "selectors": ["span"], "fallback": "span" },
+  "a[text=\"Withdraw Funds\"]": {
+    "selectors": ["text=Withdraw Funds"],
+    "fallback": "text=Withdraw Funds"
+  },
+  "a[text=\"Transfer Funds\"]": {
+    "selectors": ["text=Transfer Funds"],
+    "fallback": "text=Transfer Funds"
+  },
+  "a[text=\"Check Balances\"]": {
+    "selectors": ["text=Check Balances"],
+    "fallback": "text=Check Balances"
+  },
+  "a[text=\"Make Deposits\"]": {
+    "selectors": ["text=Make Deposits"],
+    "fallback": "text=Make Deposits"
+  },
+  "a[text=\"Bill Pay\"]": {
+    "selectors": ["text=Bill Pay"],
+    "fallback": "text=Bill Pay"
+  },
+  "a[text=\"Account History\"]": {
+    "selectors": ["text=Account History"],
+    "fallback": "text=Account History"
+  },
+  "a[text=\"Read More\"]": {
+    "selectors": ["text=Read More"],
+    "fallback": "text=Read More"
+  },
+  "h4": { "selectors": ["h4"], "fallback": "h4" },
+  "a[text=\"ParaBank Is Now Re-Opened\"]": {
+    "selectors": ["text=ParaBank Is Now Re-Opened"],
+    "fallback": "text=ParaBank Is Now Re-Opened"
+  },
+  "a[text=\"New! Online Bill Pay\"]": {
+    "selectors": ["text=New! Online Bill Pay"],
+    "fallback": "text=New! Online Bill Pay"
+  },
+  "a[text=\"New! Online Account Transfers\"]": {
+    "selectors": ["text=New! Online Account Transfers"],
+    "fallback": "text=New! Online Account Transfers"
+  },
+  "div#footermainPanel": {
+    "selectors": ["div#footermainPanel"],
+    "fallback": "div#footermainPanel"
+  },
+  "div#footerPanel": {
+    "selectors": ["div#footerPanel"],
+    "fallback": "div#footerPanel"
+  },
+  "a[text=\"Home\"]": { "selectors": ["text=Home"], "fallback": "text=Home" },
+  "a[text=\"Forum\"]": {
+    "selectors": ["text=Forum"],
+    "fallback": "text=Forum"
+  },
+  "a[text=\"Site Map\"]": {
+    "selectors": ["text=Site Map"],
+    "fallback": "text=Site Map"
+  },
+  "a[text=\"Contact Us\"]": {
+    "selectors": ["text=Contact Us"],
+    "fallback": "text=Contact Us"
+  },
+  "a[text=\"www.parasoft.com\"]": {
+    "selectors": ["text=www.parasoft.com"],
+    "fallback": "text=www.parasoft.com"
+  }
+}
