@@ -1,4 +1,5 @@
 import fs from 'fs';
+import path from 'path';
 
 /**
  * Best-in-class: Extracts robust locators for all visible, interactable elements.
@@ -113,5 +114,100 @@ export async function scanAndHealLocators(page: any, locatorJsonPath: string) {
         );
       }
     }
+  }
+}
+
+export async function healAndSave(
+  page: any,
+  elemName: string,
+  pageJsonPath: string
+) {
+  try {
+    if (!pageJsonPath || !fs.existsSync(pageJsonPath)) return null;
+    const pageJson = JSON.parse(fs.readFileSync(pageJsonPath, 'utf-8'));
+    pageJson.elements = pageJson.elements || {};
+    pageJson.elements[elemName] = pageJson.elements[elemName] || {};
+    pageJson.elements[elemName].selectors =
+      pageJson.elements[elemName].selectors || [];
+
+    const candidates: string[] = [];
+    // common heuristics
+    candidates.push(`input[name="${elemName}"]`);
+    candidates.push(`input[id="${elemName}"]`);
+    candidates.push(`#${elemName}`);
+    candidates.push(`[name="${elemName}"]`);
+    candidates.push(`[placeholder*="${elemName}"]`);
+    candidates.push(`label:has-text("${elemName}")`);
+    candidates.push(`text=${elemName}`);
+    // semantic guesses
+    if (/user|email/i.test(elemName))
+      candidates.push("input[name*='user']", "input[name*='email']");
+    if (/pass/i.test(elemName)) candidates.push("input[name*='pass']");
+
+    // dedupe
+    const uniq = Array.from(new Set(candidates));
+    for (const cand of uniq) {
+      try {
+        const loc = page.locator(cand);
+        if (await loc.count()) {
+          // persist to top of selectors array
+          if (!pageJson.elements[elemName].selectors.includes(cand)) {
+            pageJson.elements[elemName].selectors.unshift(cand);
+          }
+          fs.writeFileSync(pageJsonPath, JSON.stringify(pageJson, null, 2));
+          console.log(
+            `[HEALED] ${elemName} -> ${cand} (saved to ${path.basename(
+              pageJsonPath
+            )})`
+          );
+          return cand;
+        }
+      } catch (e) {
+        // ignore invalid selectors
+      }
+    }
+    // fallback: attempt to find inputs/buttons and pick by type
+    const inputs = await page.$$(`input, button, textarea, select, a`);
+    for (const el of inputs) {
+      try {
+        if (!(await el.isVisible())) continue;
+        const id = await el.getAttribute('id');
+        const name = await el.getAttribute('name');
+        const text = (await el.textContent()) || '';
+        if (
+          name &&
+          /user|email|pass|login|submit|search/i.test(name + elemName)
+        ) {
+          const sel = name ? `input[name="${name}"]` : id ? `#${id}` : null;
+          if (sel) {
+            if (!pageJson.elements[elemName].selectors.includes(sel)) {
+              pageJson.elements[elemName].selectors.unshift(sel);
+            }
+            fs.writeFileSync(pageJsonPath, JSON.stringify(pageJson, null, 2));
+            console.log(`[HEALED] ${elemName} -> ${sel} (saved)`);
+            return sel;
+          }
+        }
+        if (
+          text &&
+          text.trim().length > 0 &&
+          text.trim().toLowerCase().includes(elemName.toLowerCase())
+        ) {
+          const sel = `text=${text.trim()}`;
+          if (!pageJson.elements[elemName].selectors.includes(sel)) {
+            pageJson.elements[elemName].selectors.unshift(sel);
+          }
+          fs.writeFileSync(pageJsonPath, JSON.stringify(pageJson, null, 2));
+          console.log(`[HEALED] ${elemName} -> ${sel} (saved)`);
+          return sel;
+        }
+      } catch (e) {
+        // ignore
+      }
+    }
+    return null;
+  } catch (err) {
+    console.error('healAndSave error', err);
+    return null;
   }
 }

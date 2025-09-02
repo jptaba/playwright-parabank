@@ -1,0 +1,26 @@
+{
+  "login": {
+    "usernameInput": {
+      "selectors": ["[data-testid='username']", "input[name='username']"],
+      "type": "input"
+    },
+    "passwordInput": {
+      "selectors": ["[data-testid='password']", "input[name='password']"],
+      "type": "input"
+    },
+    "loginButton": {
+      "selectors": ["[data-testid='login-button']", "input[type='submit']"],
+      "type": "button"
+    }
+  },
+  "mainpage": {
+    "header": {
+      "selectors": ["header"],
+      "type": "container"
+    },
+    "footer": {
+      "selectors": ["footer"],
+      "type": "container"
+    }
+  }
+}

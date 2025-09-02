@@ -1,4 +1,8 @@
+/dist
+**/*.js
 
+# keep important assets if present (optional overrides)
+!allure-report/**
 # Playwright
 node_modules/
 /test-results/

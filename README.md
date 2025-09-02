@@ -1,6 +1,7 @@
 # Playwright MasterClass E2E Framework
 
 ## Overview
+
 This project is a modern, modular, and robust Playwright-based E2E automation framework for the Parabank demo application. It supports BDD with Cucumber, advanced locator management, self-healing, accessibility testing, Allure reporting, and more.
 
 ---
@@ -69,6 +70,7 @@ Playwright MasterClass/
 ## Locator Management, Crawling, and Healing
 
 ### Modularized Locators
+
 - All selectors are organized by page/component in `utils/locators/*.json`.
 - Each locator entry includes:
   - `selectors`: Array of preferred selectors (testId, ARIA, text, CSS)
@@ -76,6 +78,7 @@ Playwright MasterClass/
 - See `utils/locators/README.md` for conventions.
 
 ### Page Crawling & Extraction
+
 - Use `runCrawlAndExtractLocators.js` to crawl a page and extract all visible/interactable elements.
 - The script prefers stable selectors and outputs/updates the relevant JSON file in `utils/locators/`.
 - Run with:
@@ -84,6 +87,7 @@ Playwright MasterClass/
   ```
 
 ### Locator Healing
+
 - Use `runLocatorHealing.js` to automatically update broken selectors in locator files.
 - The script attempts alternative selectors and logs analytics for healing attempts.
 - Run with:
@@ -96,6 +100,7 @@ Playwright MasterClass/
 ## Creating a New Test Case
 
 1. **For Cucumber (BDD):**
+
    - Add a new `.feature` file in `features/` describing your scenario.
    - Add or update step definitions in `features/step_definitions/`, using modularized locators and Playwright's recommended queries.
    - Run with:
@@ -104,6 +109,7 @@ Playwright MasterClass/
      ```
 
 2. **For Playwright Native:**
+
    - Add a new `.spec.ts` file in `tests/`.
    - Use Playwright's `test` and `expect` APIs, and import locators/utilities as needed.
    - Run with:
@@ -118,6 +124,7 @@ Playwright MasterClass/
 ---
 
 ## Accessibility & Reporting
+
 - Accessibility tests: See `a11y-login.spec.ts` and use `@axe-core/playwright` via `runA11yTest`.
 - Allure reports: After running tests, open the HTML report:
   ```
@@ -128,6 +135,7 @@ Playwright MasterClass/
 ---
 
 ## Best Practices
+
 - Always use modularized locators and Playwright's recommended queries (`getByTestId`, `getByRole`, `getByText`).
 - Prefer stable selectors (`data-testid`, ARIA, text) for all new locators.
 - Use crawling and healing scripts to automate locator management and reduce maintenance.

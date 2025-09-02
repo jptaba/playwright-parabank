@@ -1,0 +1,10 @@
+{
+  "header": {
+    "selectors": ["header"],
+    "fallback": "header"
+  },
+  "footer": {
+    "selectors": ["footer"],
+    "fallback": "footer"
+  }
+}

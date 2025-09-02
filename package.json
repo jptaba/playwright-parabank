@@ -3,7 +3,14 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "bdd": "cucumber-js --require-module ts-node/register --require features/support/world.ts --require features/step_definitions/**/*.ts",
+    "gen:playwright": "node ./scripts/generatePlaywrightFromGherkin.js",
+    "test:playwright": "npx playwright test",
+    "test:playwright:headed": "npx playwright test --headed",
+    "check:no-shadow-js": "node ./scripts/checkNoShadowJs.js",
+    "ci": "npm run check:no-shadow-js && tsc --noEmit"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",

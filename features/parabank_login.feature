@@ -4,7 +4,8 @@ Feature: Parabank Login
   So that I can access my account
 
   Scenario: Successful login with valid credentials
-    Given I am on the Parabank login page
-    When I log in with valid credentials
-    Then I should see the account overview page
-    And I log out
+    Given I open the login page
+    When I fill the "username" with "john"
+    When I fill the "password" with "demo"
+    When I click the "submit"
+    Then I should see the "overviewHeader"

@@ -1,0 +1,10 @@
+{
+  "page": "parabank",
+  "url": "https://parabank.parasoft.com/parabank/index.htm",
+  "elements": {
+    "username": { "fromRegistry": "login.usernameInput" },
+    "password": { "fromRegistry": "login.passwordInput" },
+    "submit": { "fromRegistry": "login.loginButton" },
+    "overviewHeader": { "selector": "h1.title" }
+  }
+}
